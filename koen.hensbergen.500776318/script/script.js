@@ -9,12 +9,11 @@ const navSlide = () => {
         burger.classList.toggle('toggle');
 
     });
+
+    console.log(nav);
 }
 
 navSlide();
-
-
-
 
 var imageSlider = ['reclame1.png', 'reclame2.png', 'reclame3.png', 'reclame4.png'];
 var i = 0;
