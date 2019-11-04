@@ -259,7 +259,7 @@ main form > section input {
     border: 1px solid #bbb;
 }
 
-main form > section > input:focus {
+main form > section input:focus {
     background-color: #D1DFF1;
     border: 1.5px solid #3B6985;
 }
