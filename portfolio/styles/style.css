@@ -90,7 +90,7 @@ header nav ul li a:hover {
 }
 
 .active .line1 {
-    transform: rotate(-45deg) translate(-13px, 13px);
+    transform: rotate(-45deg) translate(-13.5px, 13.5px);
 }
 
 .active .line2 {
@@ -100,6 +100,17 @@ header nav ul li a:hover {
 .active .line3 {
     transform: rotate(45deg) translate(-13px, -13px);
 }
+
+/*
+@media screen and (min-width: 1440px) {
+    
+    .start h1 {
+        font-size: 5rem;
+        letter-spacing: 1rem;
+    }
+        
+}
+*/
 
 /*MAIN*/
 
