@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue";
+}
+
+/*HEADER*/
+.header {
+    background-image: linear-gradient(to right, rgba(74,74,154,0.7), rgba(22,22,34,0.7)), url(../images/achtergrond.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+}
+
+.start {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    margin-top: 50vh;
+}
+
+.start h1, h2 {
+    color: white;
+}
+
+.start h1 {
+    font-size: 3.75rem;
+    letter-spacing: 1rem;
+}
+
+.start h2 {
+    font-size: 2.5rem;
+    letter-spacing: 0.5rem;
+}
+
+
+header nav ul {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(74,74,154,0.9);
+    right: -100%;    
+    transition: 0.5s;
+    text-align: center;
+}
+
+header nav ul li {
+    list-style: none;     
+    margin: auto;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    font-size: 3rem;    
+    padding: 1rem;
+    color: #E7E7ED;
+}
+
+header nav ul li a:hover {
+    color: #BABAF6;
+}
+
+/*Pop up menu in scherm*/
+.nav-active {
+    right: 0;
+}
+
+.header .burger {
+    background: #E7E7ED;
+    display: inline-block;
+    border-radius: 50%;
+    padding: 13px 9px;    
+    margin: 1.25rem;
+    position: fixed;
+    bottom: 0;
+    right: 0;    
+    cursor: pointer;
+    z-index: 1;
+}
+
+.line1, .line2, .line3 {
+    width: 1.5rem;
+    height: 0.2rem;
+    background: #000;
+    margin: 0.25rem;
+    transition: .4s;
+}
+
+.active .line1 {
+    transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+.active .line2 {
+    opacity: 0;
+}
+
+.active .line3 {
+    transform: rotate(45deg) translate(-5px, -5px);
+}
+
+/*MAIN*/
+
+/*FOOTER*/
