@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>www.scmuiderberg.nl</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <header>
+        <!--<div></div>-->
+        <nav>
+            <img src="images/logo.png" alt="">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Club</a></li>
+                <li><a href="#">Sponsors</a></li>
+                <li><a href="#">Programma</a></li>
+                <li><a href="#">Jeugd</a></li>
+                <li><a href="#">Senioren</a></li>
+                <li><a href="#">Contact & lidmaatschap</a></li>
+                <li><a href="#">Mijn club</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h3>Lid worden</h3>
+        <form>
+            <section>
+                <label for="naam">Naam</label>
+                <input type="text" name="naam" id="" placeholder="Voornaam" required>
+                <input type="text" name="naam" id="" placeholder="Tussenv.">
+                <input type="text" name="naam" id="" placeholder="Achternaam" required>
+
+                <label for="gbd">Geboortedatum</label>
+                <input type="date" name="gbd" placeholder="" required>
+            </section>
+            <section>
+                <label for="straat">Straat</label>
+                <input type="text" name="straat" id="" placeholder="Straatnaam" required>
+
+                <label for="huisnr">Huisnummer</label>
+                <div>
+                    <input type="Number" name="huisnr" id="" placeholder="Nr." required>
+                    <input type="text" name="huisnr" id="" placeholder="Toev.">
+                </div>
+
+                <label for="postcode">Postcode</label>
+                <div>
+                    <input type="number" name="postcode" id="" placeholder="0000" required>
+                    <input type="text" name="postcode" id="" placeholder="XX" required>
+                </div>
+
+                <label for="plaats">Woonplaats</label>
+                <input type="text" name="plaats" id="" placeholder="Woonplaats" required>
+            </section>
+            <section>
+                <label for="mail">E-mailadres</label>
+                <input type="email" name="mail" placeholder="naam@email.nl" required>
+
+                <label for="telefoon">Telefoonnummer</label>
+                <input type="text" name="telefoon" placeholder="" required>
+            </section>
+            <input type="submit" name="submit" value="Versturen">
+        </form>
+    </main>
+    <script src="script/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,531 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue";
+    transition: 0.1s;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    width: 100vw;
+}
+
+/*HEADER*/
+/*Boven image maar verpest navbar!!!! hoe op te lossen?*/
+/*
+header > div:first-child {
+    background-image: url("../images/header1.jpg");
+    width: 100%;
+    height: 5.6rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 1.5rem;
+}
+*/
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: #1858A1;
+    height: 8vh;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    box-shadow: 0 8px 7px 0 rgba(0, 0, 0, .2);
+}
+
+header nav img {
+    width: 3rem;
+    height: auto;
+    margin-left: 1.5rem;
+}
+
+header nav > ul {
+    display: flex;
+    position: fixed;
+    height: 92vh;
+    /* zorgt voor max screen size 100 vh */
+    top: 8vh;
+    background-color: #1858A1;
+    flex-direction: column;
+    width: 100%;
+    right: -100%;
+    transition: right 0.3s ease-in;
+}
+
+header nav > ul > li {
+    width: 18rem;
+    margin: 0 auto;
+    border-top: 1px solid #144A89;
+    list-style: none;
+    padding: 1rem 0 1rem 1.5rem;
+}
+
+header nav > ul > li > a {
+    font-family: "Verdana";
+    color: #F9F4C7;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/*CLASS vanwege JS*/
+.burger div {
+    width: 1.5rem;
+    height: .2rem;
+    margin: .3rem;
+    background-color: white;
+    transition: all 0.3s ease;
+    margin-right: 1.5rem;
+}
+
+/*CLASS die toegevoegd wordt bij klikken (Zie JS)*/
+.nav-active {
+    right: 0;
+}
+
+/*.Toggle wordt toegevoegd aan hamburger menu voor animatie*/
+.toggle div:nth-child(1) {
+    transform: rotate(-45deg) translate(0px, 11.5px);
+}
+
+.toggle div:nth-child(2) {
+    opacity: 0;
+}
+
+.toggle div:nth-child(3) {
+    transform: rotate(45deg) translate(0px, -11.5px);
+}
+
+/*Voor navbar wanneer je scrollt naar beneden*/
+/*
+.sticky {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    box-shadow: 0 8px 7px 0 rgba(0,0,0,.2);
+}
+*/
+
+/*MAIN*/
+main {
+    margin: 4.5rem auto 1.5rem auto;
+    width: 18.5rem;
+}
+
+main h3 {
+    background-color: #1858A1;
+    color: white;
+    padding: 0.5rem;
+    font-size: 16px;
+}
+
+main div {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main article {
+    /*    margin: 1.5rem 0 1.5rem 0;*/
+    padding: 0.9rem 0;
+    display: flex;
+    border-bottom: 1px solid #c2c2c2;
+    width: 100%;
+}
+
+main article > img {
+    width: auto;
+    height: 3.5rem;
+    padding-right: 1.5rem;
+    margin: auto 0;
+}
+
+main article div span:nth-child(-n+2) {
+    color: black;
+    font-family: "Verdana";
+    text-transform: uppercase;
+    font-size: 10px;
+    margin: 0px 5px 10px 0px;
+    padding: 5px 8px;
+    /*    display: inline-block;*/
+    font-weight: bold;
+}
+
+main article div span:nth-child(4) {
+    color: gray;
+    font-family: "Verdana";
+    font-size: 11px;
+}
+
+main article div > h4 {
+    color: #024F98;
+    font-weight: bold;
+    font-size: 13px;
+    width: 100%;
+}
+
+main article div > p {
+    display: none;
+    line-height: 1.5rem;
+    font-family: "Verdana";
+    font-size: 13px;
+}
+
+/*TABEL*/
+
+main > div:nth-child(n+3) {
+    overflow-x: auto;
+    padding: 0.9rem 0;
+}
+
+div table {
+    margin: auto;
+    text-align: left;
+    font-size: 13px;
+    white-space: nowrap;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    background-color: #E7E6E6;
+    padding: 5px 10px;
+    font-family: "Verdana";
+}
+
+td {
+    padding: 0 10px;
+    font-family: "Verdana";
+}
+
+tr:nth-child(odd) {
+    background-color: #FAFAFA;
+}
+
+tr:nth-child(even) {
+    background-color: #F1F1F1;
+}
+
+th:nth-child(2) {
+    text-align: center;
+}
+
+td:nth-child(2) {
+    text-align: center;
+}
+
+/*FOOTER*/
+
+footer div {
+    display: flex;
+    margin: 1.5rem auto;
+    width: 18.5rem;
+}
+
+footer div img {
+    height: 1.5rem;
+    margin: auto;
+}
+
+/*FORMULIER*/
+
+main form > section {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 0;
+    width: 14rem;
+    margin: auto;
+}
+
+main form > section > label {
+    margin: 0.1rem 0;
+    font-weight: bold;
+    font-size: 13px;
+    padding-top: 0.5rem;
+}
+
+main form > section > div {
+    flex-direction: row;
+    padding: 0;
+    flex-wrap: nowrap;
+}
+
+main form > section input {
+    padding: 0.3rem;
+    font-size: 12px;
+    border-radius: 3px;
+    border: 1px solid #bbb;
+}
+
+main form > section input:focus {
+    background-color: #D1DFF1;
+    border: 1.5px solid #3B6985;
+}
+
+main form > input {
+    padding: 0.3rem 2rem;
+    border-radius: 3px;
+    border: 1px solid;
+    background-color: #1858A1;
+    color: white;
+    display: block;
+    margin: auto;
+}
+
+main form section div input:nth-of-type(1) {
+    width: 4rem;
+}
+
+main form section div input:nth-of-type(2) {
+    width: 2rem;
+}
+
+main form section:nth-child(1) input:nth-of-type(2) {
+    width: 5rem;
+}
+
+main form section:nth-child(1) input:nth-of-type(4) {
+    width: 8rem;
+}
+
+/*MEDIA QUERIES*/
+@media screen and (min-width: 480px) {
+
+    /*
+    header > div:first-child {    
+        height: 7.5rem;    
+    }
+*/
+
+    header nav ul li {
+        width: 27rem;
+    }
+
+    main {
+        width: 27.5rem;
+    }
+
+    /*ARTICLE*/
+
+    main article div h4 {
+        font-size: 15px;
+    }
+
+    main article img {
+        height: 4.5rem;
+    }
+
+}
+
+@media screen and (min-width: 720px) {
+
+    /*
+    header > div:first-child {    
+        height: 11.25rem;    
+    }    
+*/
+    header nav ul li {
+        width: 41rem;
+    }
+
+    main {
+        width: 41.5rem;
+    }
+
+    main h3 {
+        font-size: 18px;
+    }
+
+    /*ARTICLE*/
+
+    main article {
+        width: 50%;
+        border-bottom: none;
+        flex-direction: column;
+    }
+
+    main article img {
+        height: 12.5rem;
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    main article div {
+        padding: 1rem;
+    }
+
+    main article div span {
+        font-size: 11px;
+    }
+
+    main article div h4 {
+        font-size: 16px;
+    }
+
+    main article div span:nth-child(4) {
+        font-size: 12px;
+    }
+
+    main article div p {
+        display: block;
+    }
+
+    /*TABEL*/
+
+    div table {
+        font-size: 14px;
+    }
+
+    /*FORMULIER*/
+
+    main form section {
+        width: 20rem;
+    }
+
+    main form section label {
+        font-size: 15px;
+    }
+
+    main form section input {
+        padding: 0.5rem;
+        font-size: 14px;
+    }
+
+    main form > input {
+        padding: 0.5rem 3rem;
+        border-radius: 3px;
+        font-size: 15px;
+    }
+
+}
+
+@media screen and (min-width: 960px) {
+
+    /*
+    header > div:first-child {    
+        height: 15rem;    
+    }
+*/
+
+    header nav ul li {
+        width: 55rem;
+    }
+
+    main {
+        width: 55.5rem;
+    }
+
+    /*ARTICLE*/
+
+    main article {
+        width: 33%;
+    }
+
+    main article div h4 {
+        font-size: 18px;
+    }
+
+    main article div p {
+        font-size: 14px;
+    }
+
+    main article div span:nth-child(4) {
+        font-size: 13px;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+
+    .burger div {
+        display: none;
+    }
+
+    header nav img {
+        width: 3.5rem;
+        height: auto;
+    }
+
+    header nav ul {
+        right: 0;
+        flex-direction: row;
+        justify-content: flex-end;
+        position: relative;
+        height: 3.75rem;
+        top: 0;
+    }
+
+    header nav ul li {
+        width: auto;
+        padding: 0;
+        border-top: none;
+        margin: auto 0;
+    }
+
+    header nav ul li a {
+        padding: 1.3rem 1rem 1.1rem 1rem;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    header nav ul li a:hover {
+        background-color: #3B6985;
+        color: white;
+    }
+
+    header nav ul li a:active {
+        border-bottom: 3px solid #F9F4C7;
+    }
+
+    /*
+    header > div:first-child {    
+        height: 18.75rem;    
+    }
+*/
+
+    main {
+        width: 69.5rem;
+    }
+
+    main h3 {
+        font-size: 21px;
+    }
+
+    /*ARTICLE*/
+
+    main article div h4 {
+        font-size: 21px;
+    }
+
+    main article div span:nth-child(4) {
+        font-size: 14px;
+    }
+
+    main article img {
+        transition: transform 0.2s;
+    }
+
+    main article img:hover {
+        transform: scale(1.1);
+    }
+
+}
+
+@media screen and (min-width: 1440px) {
+
+    /*
+    header > div:first-child {    
+        height: 22.5rem;    
+    }
+*/
+
+    main {
+        width: 83.5rem;
+    }
+
+    main article div span:nth-child(4) {
+        font-size: 15px;
+    }
+
+}
